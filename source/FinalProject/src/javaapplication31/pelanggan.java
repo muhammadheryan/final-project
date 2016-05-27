@@ -9,11 +9,18 @@ public class pelanggan {
     String IDpelanggan,NIK,nama,TTL;
     java.util.Date trdftr= new java.util.Date();
     java.text.SimpleDateFormat tampiltrdftr= new java.text.SimpleDateFormat("dd/MM/yyyy");
+    /*
+    untuk menentukan tanggal terdaftar
+    */
     public void terdaftar(int a, int b, int c){
      trdftr.setDate(a);
      trdftr.setMonth(b);
      trdftr.setYear(c);
-    }public String gettrdftr(){
+    }
+    /*
+    untuk menampilkan tanggal terdaftar
+    */
+    public String gettrdftr(){
                 return String.format(trdftr.getDate()+"/"+trdftr.getMonth()+"/"+trdftr.getYear());
     }
 }
