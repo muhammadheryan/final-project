@@ -4,6 +4,9 @@
  * and open the template in the editor.
  */
 package javaapplication31;
+/*
+
+*/
 public class kamar extends pelanggan{
     String IDkamar,kelas;
     int hargakamar;
@@ -16,6 +19,9 @@ public class kamar extends pelanggan{
     int kamarR=50,kamarP=20,kamarS=20,kamarV=10;
     double harga;
     static int a = 0;
+    /*
+    untuk menampilkan keterangan kamar
+    */
     public void kelas() {
         String kelas[][] = {{"KELAS", "      JUMLAH KAMAR", "   HARGA PERMALAM (Rp)", "daftar ID kamar"},
         {"Reguler", "        50", "            100.000", "             R1-R50"},
@@ -29,6 +35,9 @@ public class kamar extends pelanggan{
             System.out.println("");
         }
     }
+    /*
+    untuk menampilkan discount
+    */
     public void disc() {
         String disc[][] = {{"AKUMULASI LAMA SEWA (hari)", "    DISCOUNT"},
         {"          0-9", "                    0%"},
@@ -42,6 +51,9 @@ public class kamar extends pelanggan{
             System.out.println("");
         }
     }
+    /*
+    untuk menampilkan kamar yang sudah di pesan
+    */
     public void checkkamar(String id){
             for (int i = 1; i <= 100; i++) {
                 if (id.equalsIgnoreCase(simpan[i])) {
@@ -56,25 +68,44 @@ public class kamar extends pelanggan{
                     break;
                 }
             }
-    }public void kosong(){
+            
+    }
+    /*
+    untuk menampilkan kamar yang masih kosong
+    */
+    public void kosong(){
             System.out.println("Daftar kamar kosong : ");
             System.out.println("Reguler : "+kamarR+" kamar");
             System.out.println("Premium : "+kamarP+" kamar");
             System.out.println("Suite   : "+kamarS+" kamar");
             System.out.println("VIP     : "+kamarV+" kamar");
-    }public void input(String a, int b) {
+            
+            
+    }
+    /*
+    untuk menampilkan data yang tersimpan
+    */
+    public void input(String a, int b) {
         int j = dataTersimpan;
         for (int i = (dataTersimpan + 1); i <= (j + b); i++) {
             simpanpelanggan[i] = a;
             dataTersimpan++;
-        }
-    }public void checkjmlh(String a) {
+        } 
+    }
+    /*
+    untuk menentukan jumlah 
+    */
+    public void checkjmlh(String a) {
         for (int i = 1; i <= dataTersimpan; i++) {
             if (a == simpanpelanggan[i]) {
                 jumlh++;
             }
         }
     }
+    
+    /*
+    untuk menentukan harga
+    */
     public void harga(String a,int b,String c){
             hari=b;
             kelas=a;
