@@ -13,6 +13,7 @@ public class Projecthotel {
         transaksi Transaksi = new transaksi();
         pelanggan Pelanggan = new pelanggan();
         kamar Kamar = new kamar();
+        // syntax untuk memasukan pilihan jenis kamar
         do {
             System.out.println("");
             Transaksi.menu();
