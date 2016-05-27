@@ -4,7 +4,9 @@
  * and open the template in the editor.
  */
 package javaapplication31;
-
+/*
+untuk menampilkan kelas transakasi
+*/
 public class transaksi extends kamar {
 
     String kodeTransaksi;
@@ -13,33 +15,48 @@ public class transaksi extends kamar {
     java.util.Date tglcheckin = new java.util.Date();
     java.util.Date tglcheckout = new java.util.Date();
     java.text.SimpleDateFormat tampilcheckout = new java.text.SimpleDateFormat("dd/MM/yyyy");
-
+/*
+    untuk menentukan tanggal
+    */
     public String gettgl() {
         return String.format(tampil.format(skrng));
     }
-
+/*
+    untuk menentukan kode transaksi
+    */
     public void setkode(String a) {
         kodeTransaksi = a;
     }
-
+/*
+    untuk menentukan tanggal chek in
+    */
     public void setcheckin(int a, int b, int c) {
         tglcheckin.setDate(a);
         tglcheckin.setMonth(b);
         tglcheckin.setYear(c);
     }
-
+/*
+    untuk menampilkan tanggal chek in
+    */
     public String getcheckin() {
         return String.format(tglcheckin.getDate()+"/"+tglcheckin.getMonth()+"/"+tglcheckin.getYear());
     }
-
+/*
+    untuk menentukan tanggal chek out
+    */
     public void setcheckout(int a) {
         tglcheckout.setDate(tglcheckin.getDate() + a);
     }
-
+/*
+    untuk menampilkan tanggal chekout
+    */
     public String getcheckout() {
         return String.format(tampilcheckout.format(tglcheckout));
     }
 
+    /*
+    untuk menampilkan daftar menu
+    */
     public void menu() {
         System.out.println("MENU : ");
         System.out.println("1.Daftar Kelas dan Harga kamar");
